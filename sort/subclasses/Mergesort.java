@@ -1,3 +1,4 @@
+package subclasses;
 public class Mergesort {
 
     void merge(int[] array, int l, int m, int r){
@@ -57,24 +58,8 @@ public class Mergesort {
         }
     }
 
-    public static void main(String[] args) {
-        int[] array = {5, 6, 7, 8, 2, 120, 30, 40};
-
-        Mergesort obj = new Mergesort();
-        
-        long start1 = System.currentTimeMillis();
-        obj.sort(array, 0, array.length - 1); 
-        long end1 = System.currentTimeMillis();
-
-        System.out.println("Given array is: ");
-        printArray(array);
-
+    public static void sort(int[] array) {
         Mergesort ob = new Mergesort();
         ob.sort(array, 0, array.length - 1);
-
-        System.out.println("Sorted array is: ");
-        printArray(array);
-
-        System.out.println("Time taken to sort (in miliseconds): " + (end1 - start1));
     }
 }
